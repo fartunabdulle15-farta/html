@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soldier Registration Form</title>
+
+<style>
+    body {
+        font-family: "Segoe UI", sans-serif;
+        background: #000;
+        padding: 40px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .form-container {
+        width: 850px;
+        background: linear-gradient(145deg, #101010, #151515, #0b0b0b);
+        padding: 35px;
+        border-radius: 15px;
+        border: 2px solid #4caf50;
+        box-shadow: 0 0 25px rgba(76, 175, 80, 0.4);
+        color: #e5e5e5;
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #be858a;
+        letter-spacing: 1px;
+        font-weight: 700;
+    }
+
+    
+        border: 2px solid #4caf50;
+        border-radius: 10px;
+        padding: 15px 20px;
+        margin-bottom: 25px;
+    }
+        color: #4caf50;
+        font-weight: bold;
+        padding: 0 10px;
+        font-size: 1.15rem;
+    }
+
+    label {
+        display: block;
+        margin-top: 14px;
+        font-weight: 600;
+    }
+
+    input, select, textarea, progress, meter {
+        width: 100%;
+        padding: 10px;
+        margin-top: 6px;
+        background: #0d0d0d;
+        border: 1px solid #444;
+        border-radius: 6px;
+        color: #e5e5e5;
+    }
+
+    input[type=checkbox],
+    input[type=radio] {
+        width: auto;
+        margin-right: 8px;
+    }
+
+    button, input[type=submit], input[type=reset], input[type=button] {
+        width: 100%;
+        padding: 14px;
+        margin-top: 15px;
+        border: none;
+        border-radius: 8px;
+        background: linear-gradient(90deg, #4caf50, #2e7d32);
+        color: #000;
+        font-size: 18px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    button:hover,
+    input[type=submit]:hover {
+        filter: brightness(1.2);
+    }
+</style>
+</head>
+
+<body>
+
+<div class="form-container">
+    <h2>Soldier & Equipment Registration</h2>
+
+    <form>
+
+        <!-- Soldier Information -->
+        
+            <legend>Soldier Information</legend>
+
+            <label>Full Name</label>
+            <input type="text" placeholder="Enter soldier's full name">
+
+            <label>Soldier ID</label>
+            <input type="number" placeholder="Enter official ID">
+
+            <label>Rank</label>
+            <select>
+                <option disabled selected>Select rank</option>
+                <option>Private</option>
+                <option>Corporal</option>
+                <option>Sergeant</option>
+                <option>Lieutenant</option>
+                <option>Captain</option>
+                <option>Major</option>
+                <option>Colonel</option>
+                <option>General</option>
+            </select>
+
+            <label>Unit / Battalion</label>
+            <input type="text" placeholder="Enter unit or battalion">
+
+            <label>Phone Number</label>
+            <input type="tel" placeholder="Enter contact number">
+
+            <label>Email Address</label>
+            <input type="email" placeholder="Enter military email">
+
+            <label>Date of Enlistment</label>
+            <input type="date">
+
+            <label>Deployment Location</label>
+            <input type="text" placeholder="Enter deployment base">
+        
+
+        <!-- Equipment Assignment -->
+        <fieldset>
+            <legend>Assigned Equipment</legend>
+
+            <label>Primary Weapon</label>
+            <input type="text" placeholder="Example: M4A1, AK-47, G36">
+
+            <label>Secondary Weapon</label>
+            <input type="text" placeholder="Example: Glock-19, M9">
+
+            <label>Ammo Count</label>
+            <input type="number" min="0">
+
+            <label>Armor Type</label>
+            <input type="text" placeholder="Kevlar, Plate Carrier, etc.">
+
+            <label>Scope / Attachments</label>
+            <input type="text" placeholder="ACOG, Red Dot, Laser, etc.">
+
+            <label>Equipment Condition</label>
+            <meter value="0.7">70%</meter>
+
+            <label>Maintenance Progress</label>
+            <progress value="40" max="100"></progress>
+        </fieldset>
+
+        <!-- Extra Form Elements -->
+        <fieldset>
+            <legend>Extra Form Elements (Required)</legend>
+
+            <label>Upload Soldier Photo</label>
+            <input type="file">
+
+            <label>Authorization Code (Hidden Field)</label>
+            <input type="hidden" value="AUTHORIZED">
+
+            <label>Preferred Duty Time</label>
+            <input type="time">
+
+            <label>Duty Week</label>
+            <input type="week">
+
+            <label>Duty Month</label>
+            <input type="month">
+
+            <label>GPS Tracker URL</label>
+            <input type="url" placeholder="Enter tracking URL">
+
+            <label>Priority Level</label>
+            <input type="range" min="1" max="5">
+
+            <label>Search Equipment Inventory</label>
+            <input type="search">
+
+            <label>Additional Notes</label>
+            <textarea rows="3" placeholder="Write additional details..."></textarea>
+        </fieldset>
+
+        <!-- Checkboxes & Radios -->
+        <fieldset>
+            <legend>Verification</legend>
+
+            <label><input type="checkbox"> Confirm soldier has passed inspection</label>
+            <label><input type="checkbox"> Confirm equipment is functional</label>
+
+            <label><input type="radio" name="status"> Active Duty</label>
+            <label><input type="radio" name="status"> Reserve</label>
+            <label><input type="radio" name="status"> Retired</label>
+        </fieldset>
+
+        <input type="submit" value="Register Soldier">
+        <input type="reset" value="Reset Form">
+
+    </form>
+</div>
+
+</body>
+</html>
