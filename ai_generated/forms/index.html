@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soldier Registration</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #000000;
+      color: hsl(240, 29%, 95%);
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: linear-gradient(135deg, #0f0b0c, #ff4b2b, #1e90ff);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.9);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      background: linear-gradient(90deg, #00f2fe, #4facfe);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    fieldset {
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(0,0,0,0.4));
+    }
+
+    legend {
+      padding: 0 10px;
+      font-weight: bold;
+      background: linear-gradient(90deg, #e89a3c, #ffd200);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    label {
+      display: block;
+      margin-top: 12px;
+      font-size: 14px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 6px;
+      border: 1px solid rgba(255,255,255,0.3);
+      background: linear-gradient(135deg, #030e14, #414345);
+      color: #fff;
+    }
+
+    input::placeholder, textarea::placeholder {
+      color: #bbb;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: #00f2fe;
+      outline: none;
+      box-shadow: 0 0 5px #00f2fe;
+    }
+
+    .inline {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+
+    .inline label {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .buttons {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    button {
+      background: linear-gradient(90deg, #00f2fe, #4facfe);
+      color: #000;
+      padding: 10px 18px;
+      border: none;
+      border-radius: 6px;
+      margin: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: linear-gradient(90deg, #4facfe, #00f2fe);
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Soldier & Weapon Registration</h1>
+
+  <form action="https://microsoft.com">
+    <fieldset>
+      <legend>Personal Information</legend>
+
+      <input type="hidden" name="form_id" value="soldier_reg_001">
+
+      <label>Full Name</label>
+      <input type="text" placeholder="e.g. fartun omar" value="">
+
+      <label>Email</label>
+      <input type="email" placeholder="e.g. fartun@email.com">
+
+      <label>Password</label>
+      <input type="password" placeholder="Enter secure password">
+
+      <label>Phone</label>
+      <input type="tel" placeholder="e.g. +256700000000">
+
+      <label>Date of Birth</label>
+      <input type="date" value="1995-01-01">
+
+      <label>Month</label>
+      <input type="month" value="2024-01">
+
+      <label>Week Joined</label>
+      <input type="week" value="2024-W01">
+
+      <label>Search ID</label>
+      <input type="search" placeholder="Search soldier ID">
+
+      <label>Age</label>
+      <input type="number" min="18" max="65" value="25">
+
+      <label>Photo</label>
+      <input type="file">
+
+      <label>Rank</label>
+      <select>
+        <option>Private</option>
+        <option selected>Sergeant</option>
+        <option>Captain</option>
+      </select>
+
+      <label>Gender</label>
+      <div class="inline">
+        <label><input type="radio" name="g" checked> Male</label>
+        <label><input type="radio" name="g"> Female</label>
+      </div>
+
+      <label>Skills</label>
+      <div class="inline">
+        <label><input type="checkbox" checked> Shooting</label>
+        <label><input type="checkbox"> Strategy</label>
+      </div>
+
+      <label>Notes</label>
+      <textarea placeholder="Enter additional notes..."></textarea>
+    </fieldset>
+
+    <fieldset>
+      <legend>Weapon Details</legend>
+
+      <label>Weapon Name</label>
+      <input type="text" placeholder="e.g. AK-47">
+
+      <label>Type</label>
+      <input list="types" placeholder="Choose or type weapon type">
+      <datalist id="types">
+        <option value="Rifle">
+        <option value="Pistol">
+      </datalist>
+
+      <label>Serial</label>
+      <input type="text" placeholder="e.g. SN123456">
+
+      <label>Condition</label>
+      <input type="range" value="5">
+
+      <label>Color</label>
+      <input type="color" value="#000000">
+
+      <label>Date</label>
+      <input type="date" value="2024-01-01">
+
+      <label>Time</label>
+      <input type="time" value="12:00">
+
+      <label>Extra</label>
+      <textarea placeholder="Additional weapon info..."></textarea>
+    </fieldset>
+
+    <fieldset>
+      <legend>Confirm</legend>
+      <label><input type="checkbox" required checked> Confirm info</label>
+    </fieldset>
+
+    <div class="buttons">
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+    </div>
+
+  </form>
+</div>
+
+</body>
+</html>
