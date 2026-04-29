@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Global Attributes Demo</title>
+</head>
+
+<body id="main-body" class="page-body" style="font-family: Arial;" data-page="demo">
+
+  <h1 id="title1" class="header" title="Main Heading" lang="en" dir="ltr" tabindex="1">
+    HTML Global Attributes Demo
+  </h1>
+
+  <p id="para1"
+     class="text"
+     style="color: blue;"
+     title="This is a paragraph"
+     lang="en"
+     dir="ltr"
+     tabindex="2"
+     contenteditable="true"
+     spellcheck="true"
+     draggable="true"
+     accesskey="p"
+     translate="yes"
+     data-type="intro">
+    This paragraph is editable. Try clicking and typing here.
+  </p>
+
+  <div id="box1"
+       class="container box"
+       style="border: 1px solid black; padding: 10px;"
+       title="A simple container"
+       lang="en"
+       dir="ltr"
+       tabindex="3"
+       draggable="true"
+       data-role="container">
+    This is a draggable container div.
+  </div>
+
+  <a id="link1"
+     class="link"
+     href="#"
+     title="A sample link"
+     lang="en"
+     dir="ltr"
+     tabindex="4"
+     accesskey="l"
+     data-action="navigate">
+    Clickable Link (press Alt + L)
+  </a>
+
+  <button id="btn1"
+          class="button"
+          style="margin-top: 10px;"
+          title="Click me"
+          lang="en"
+          dir="ltr"
+          tabindex="5"
+          accesskey="b"
+          data-action="submit">
+    Submit Button (Alt + B)
+  </button>
+
+  <section id="section1"
+           class="section"
+           hidden
+           data-hidden="true"
+           title="Hidden Section">
+    This section is hidden using the hidden attribute.
+  </section>
+
+  <footer id="footer1"
+          class="footer"
+          style="margin-top: 20px;"
+          title="Footer area"
+          lang="en"
+          dir="ltr"
+          tabindex="6"
+          data-info="footer">
+    Footer content here.
+  </footer>
+
+</body>
+</html>
